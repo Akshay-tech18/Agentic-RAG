@@ -1,0 +1,25 @@
+College Library Rules
+
+Students can borrow up to three books at a time.
+
+Books should be returned within fourteen days.
+
+Late returns will result in a fine.
+
+----------------------------------------
+
+Hostel Rules
+
+Students must return to the hostel before 9 PM.
+
+Visitors are allowed only between 10 AM and 6 PM.
+
+----------------------------------------
+
+Exam Rules
+
+Students should carry their ID card.
+
+Electronic gadgets are not allowed inside the examination hall.
+
+Attendance below 75% makes a student ineligible for exams.
