@@ -67,51 +67,66 @@
 #         }
 #     )
 
-from ollama import chat
+# from ollama import chat
 
-messages=[
-    {
-        "role":"system",
-        "content":"""
-you are an AI teacher.
-explain concepts simply.
-use real-life examples.
-keep answer under 150 words.
-if appropriate, end with one short quize question.
-"""
-    }
-]
+# messages=[
+#     {
+#         "role":"system",
+#         "content":"""
+# you are an AI teacher.
+# explain concepts simply.
+# use real-life examples.
+# keep answer under 150 words.
+# if appropriate, end with one short quize question.
+# """
+#     }
+# ]
 
-print("=" * 50)
-print("     AI teacher")
-print("=" * 50)
+# print("=" * 50)
+# print("     AI teacher")
+# print("=" * 50)
+
+# while True:
+#     question = input("\nYou: ")
+
+#     if question.lower() == "exit":
+#         break
+
+#     messages.append(
+#         {
+#             "role":"user",
+#             "content":question
+#         }
+#     )
+
+#     response = chat(
+#         model="qwen2.5-coder:7b",
+#         messages=messages
+#     )
+
+#     answer = response["message"]["content"]
+
+#     print("\n Teacher \n")
+#     print(answer)
+
+#     messages.append(
+#         {
+#             "role":"user",
+#             "content":answer
+#         }
+#     )
+
+from rag import ask
 
 while True:
-    question = input("\nYou: ")
-
+    question = input("\nAsk: ")
     if question.lower() == "exit":
         break
-
-    messages.append(
-        {
-            "role":"user",
-            "content":question
-        }
-    )
-
-    response = chat(
-        model="qwen2.5-coder:7b",
-        messages=messages
-    )
-
-    answer = response["message"]["content"]
-
-    print("\n Teacher \n")
-    print(answer)
-
-    messages.append(
-        {
-            "role":"user",
-            "content":answer
-        }
-    )
+    result = ask(question)
+    # print("\n Answer: \n")
+    # print(answer)
+    print("\n Answer \n")
+    print(result["answer"])
+    print("\nSources: ")
+    for s in result["sources"]:
+        print(f"- {s}")
