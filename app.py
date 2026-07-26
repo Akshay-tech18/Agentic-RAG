@@ -116,17 +116,26 @@
 #         }
 #     )
 
-from rag import ask
+# from rag import ask
 
+# while True:
+#     question = input("\nAsk: ")
+#     if question.lower() == "exit":
+#         break
+#     # result = ask(question)
+#     from agent import run_agent
+#     result = run_agent(question)
+#     # print("\n Answer: \n")
+#     # print(answer)
+#     # print("\n Answer \n")
+#     # print(result["answer"])
+#     # print("\nSources: ")
+#     # for s in result["sources"]:
+#     #     print(f"- {s}")
+
+from agent import run_agent
 while True:
     question = input("\nAsk: ")
-    if question.lower() == "exit":
-        break
-    result = ask(question)
-    # print("\n Answer: \n")
-    # print(answer)
-    print("\n Answer \n")
-    print(result["answer"])
-    print("\nSources: ")
-    for s in result["sources"]:
-        print(f"- {s}")
+
+    result = run_agent(question)
+    print(result)
