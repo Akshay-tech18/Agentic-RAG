@@ -133,7 +133,7 @@
 #     # for s in result["sources"]:
 #     #     print(f"- {s}")
 
-from agent import run_agent
+from older.agent import run_agent
 while True:
     question = input("\nAsk: ")
 

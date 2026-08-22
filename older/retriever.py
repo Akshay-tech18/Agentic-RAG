@@ -1,7 +1,7 @@
 import chromadb
 from ollama import embeddings
 
-from config import (
+from older.config import (
     DB_PATH,
     COLLECTION_NAME,
     EMBEDDING_MODEL,

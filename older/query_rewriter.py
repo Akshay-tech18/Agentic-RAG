@@ -1,5 +1,5 @@
 from ollama import chat
-from config import LLM_MODEL
+from older.config import LLM_MODEL
 
 def rewrite_query(question, history):
     history_text = ""

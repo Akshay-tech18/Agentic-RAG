@@ -70,13 +70,13 @@
 # print("\nAnswer:\n")
 # print(response["message"]["content"])
 
-from retriever import retrieve
-from reranker import reranker
-from prompt_builder import build_prompt
-from llm import generate_answer
-from config import FINAL_K
-from memory import (add_message, get_history)
-from query_rewriter import rewrite_query
+from older.retriever import retrieve
+from older.reranker import reranker
+from older.prompt_builder import build_prompt
+from older.llm import generate_answer
+from older.config import FINAL_K
+from older.memory import (add_message, get_history)
+from older.query_rewriter import rewrite_query
 
 def ask(question):
     history = get_history()
